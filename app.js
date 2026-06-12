@@ -24,14 +24,37 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Messi Mode Toggle controller
     const messiToggle = document.getElementById('messi-toggle');
+    const rohitToggle = document.getElementById('rohit-toggle');
+
     if (messiToggle) {
         const videoSource = bgVideo.querySelector('source');
         messiToggle.addEventListener('click', () => {
+            document.body.classList.remove('rohit-mode');
             const isMessi = document.body.classList.toggle('messi-mode');
             
             // Update typing text and video source
             if (isMessi) {
                 videoSource.src = 'messi.mp4';
+            } else {
+                startTyping("Hi i am spidy");
+                videoSource.src = 'Untitled.mp4';
+            }
+            
+            // Reload and play video
+            bgVideo.load();
+            bgVideo.play().catch(err => console.log("Video play interrupted:", err));
+        });
+    }
+
+    if (rohitToggle) {
+        const videoSource = bgVideo.querySelector('source');
+        rohitToggle.addEventListener('click', () => {
+            document.body.classList.remove('messi-mode');
+            const isRohit = document.body.classList.toggle('rohit-mode');
+            
+            // Update typing text and video source
+            if (isRohit) {
+                videoSource.src = 'rohit.mp4';
             } else {
                 startTyping("Hi i am spidy");
                 videoSource.src = 'Untitled.mp4';

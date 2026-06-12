@@ -125,6 +125,105 @@ body.messi-mode .typing-title {
     display: none !important;
 }
 
+/* Rohit Mode Styles */
+.rohit-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+body.rohit-mode .rohit-wrapper {
+    display: flex;
+}
+
+.rohit-bg-text {
+    position: absolute;
+    z-index: -1;
+    font-size: 5.5rem;
+    font-weight: 900;
+    color: #ffcc00; /* Yellow */
+    font-family: 'Space Grotesk', sans-serif;
+    text-transform: uppercase;
+    white-space: nowrap;
+    opacity: 0.9;
+    letter-spacing: 2px;
+    text-shadow: 0 0 35px rgba(255, 204, 0, 0.7);
+    pointer-events: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.rohit-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transform: scale(0);
+    animation: popIn 1s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    filter: drop-shadow(0 0 30px rgba(0, 75, 147, 0.6)); /* India Blue drop shadow */
+}
+
+body.rohit-mode .spidy-img {
+    display: none !important;
+}
+
+body.rohit-mode .image-wrapper {
+    width: 650px;
+    height: 650px;
+}
+
+body.rohit-mode .typing-title {
+    display: none !important;
+}
+
+/* Floating Rohit Button in Right Corner */
+.rohit-btn {
+    position: fixed;
+    top: 30px;
+    right: 160px; /* Shifted to the left of the Messi button */
+    z-index: 100;
+    padding: 10px 20px;
+    border-radius: 30px;
+    background: rgba(15, 15, 22, 0.65);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.rohit-btn:hover {
+    background: rgba(255, 204, 0, 0.95); /* Yellow */
+    border-color: rgba(255, 204, 0, 1);
+    color: #07070a;
+    box-shadow: 0 8px 20px rgba(255, 204, 0, 0.4);
+    transform: scale(1.05);
+}
+
+.rohit-btn:active {
+    transform: scale(0.95);
+}
+
+body.rohit-mode .rohit-btn {
+    background: #ffcc00;
+    border-color: #ffcc00;
+    color: #07070a;
+    box-shadow: 0 8px 25px rgba(255, 204, 0, 0.6);
+}
+
 /* Floating Messi Button in Right Corner */
 .messi-btn {
     position: fixed;
@@ -179,6 +278,13 @@ body.messi-mode .messi-btn {
         width: 380px;
         height: 380px;
     }
+    body.rohit-mode .image-wrapper {
+        width: 380px;
+        height: 380px;
+    }
+    .rohit-bg-text {
+        font-size: 2.8rem;
+    }
     .typing-title {
         font-size: 2.2rem;
     }
@@ -195,6 +301,12 @@ body.messi-mode .messi-btn {
     .messi-btn {
         top: 20px;
         right: 20px;
+        padding: 8px 16px;
+        font-size: 0.8rem;
+    }
+    .rohit-btn {
+        top: 20px;
+        right: 125px;
         padding: 8px 16px;
         font-size: 0.8rem;
     }
