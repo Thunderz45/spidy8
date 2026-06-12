@@ -98,8 +98,26 @@ body.messi-mode, body.messi-mode * {
     cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'><circle cx='16' cy='16' r='14' fill='%23ffffff' stroke='%23111111' stroke-width='1.5'/><polygon points='16,11.2 20.6,14.5 18.8,19.9 13.2,19.9 11.4,14.5' fill='%23111111'/><polygon points='13,2 19,2 17.5,5 14.5,5' fill='%23111111'/><polygon points='28.5,10 29.5,14 26,15.5 24.5,12' fill='%23111111'/><polygon points='23.5,27.5 20,28.5 20,25.5 22.5,23.5' fill='%23111111'/><polygon points='8.5,27.5 12,28.5 12,25.5 9.5,23.5' fill='%23111111'/><polygon points='3.5,10 2.5,14 6,15.5 7.5,12' fill='%23111111'/><line x1='16' y1='11.2' x2='16' y2='5' stroke='%23111111' stroke-width='1.5'/><line x1='20.6' y1='14.5' x2='24.5' y2='12' stroke='%23111111' stroke-width='1.5'/><line x1='18.8' y1='19.9' x2='21.2' y2='24.5' stroke='%23111111' stroke-width='1.5'/><line x1='13.2' y1='19.9' x2='10.8' y2='24.5' stroke='%23111111' stroke-width='1.5'/><line x1='11.4' y1='14.5' x2='7.5' y2='12' stroke='%23111111' stroke-width='1.5'/><line x1='14.5' y1='5' x2='7.5' y2='12' stroke='%23111111' stroke-width='1.5'/><line x1='17.5' y1='5' x2='24.5' y2='12' stroke='%23111111' stroke-width='1.5'/><line x1='26' y1='15.5' x2='21.2' y2='24.5' stroke='%23111111' stroke-width='1.5'/><line x1='6' y1='15.5' x2='10.8' y2='24.5' stroke='%23111111' stroke-width='1.5'/><line x1='9.5' y1='23.5' x2='22.5' y2='23.5' stroke='%23111111' stroke-width='1.5'/></svg>") 16 16, auto !important;
 }
 
+.messi-img {
+    display: none;
+}
+
 body.messi-mode .spidy-img {
+    display: none !important;
+}
+
+body.messi-mode .messi-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transform: scale(0);
+    animation: popIn 1s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
     filter: drop-shadow(0 0 25px rgba(117, 170, 219, 0.8)) brightness(1.1);
+}
+
+body.messi-mode .typing-title {
+    display: none !important;
 }
 
 /* Floating Messi Button in Right Corner */

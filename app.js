@@ -31,7 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
             
             // Update typing text and video source
             if (isMessi) {
-                startTyping("Hi I am Messi 🐐");
                 videoSource.src = 'messi.mp4';
             } else {
                 startTyping("Hi i am spidy");
