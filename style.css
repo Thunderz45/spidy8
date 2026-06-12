@@ -377,11 +377,22 @@ body {
     background: #ff4a4a;
 }
 
-/* Responsive adjust for Chat Window */
-@media (max-width: 400px) {
+/* Responsive adjust for Chat Window & Container on mobile */
+@media (max-width: 500px) {
+    .chatbot-container {
+        bottom: 20px;
+        right: 20px;
+    }
+    .chat-toggle-btn {
+        width: 52px;
+        height: 52px;
+    }
     .chat-window {
         width: calc(100vw - 40px);
-        right: -10px;
+        height: 400px;
+        max-height: calc(100vh - 100px);
+        bottom: 70px;
+        right: 0;
     }
 }
 
