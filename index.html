@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hi, I am Spidy</title>
+    
+    <!-- Google Fonts for premium superhero & attractive typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Russo+One&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Video -->
+    <div class="video-container">
+        <video autoplay muted loop playsinline id="bg-video">
+            <source src="Untitled.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="content-container">
+        <!-- Spidy Image -->
+        <div class="image-wrapper">
+            <img src="images-removebg-preview.png" alt="Spidy" class="spidy-img">
+        </div>
+        <!-- Typing Animation Text -->
+        <h1 class="typing-title">
+            <span id="typed-text"></span><span class="cursor">|</span>
+        </h1>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
