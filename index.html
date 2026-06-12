@@ -48,6 +48,32 @@
         </h1>
     </main>
 
+    <!-- Chatbot Container -->
+    <div id="chatbot-container" class="chatbot-container">
+        <!-- Chatbot Window -->
+        <div id="chat-window" class="chat-window hidden">
+            <div class="chat-header">
+                <div class="chat-header-info">
+                    <img src="spiderman edits.jpeg" alt="Spidy DP" class="chat-dp">
+                    <span class="chat-title">Spidy</span>
+                </div>
+                <button id="close-chat" class="close-btn" aria-label="Close Chat">&times;</button>
+            </div>
+            <div id="chat-messages" class="chat-messages">
+                <div class="msg bot-msg">Hey! Web-slinger here. Send me a message!</div>
+            </div>
+            <form id="chat-input-form" class="chat-input-area">
+                <input type="text" id="chat-input" placeholder="Type a message..." autocomplete="off" required>
+                <button type="submit" class="chat-send-btn">Send</button>
+            </form>
+        </div>
+
+        <!-- Floating Chatbot Toggle Button -->
+        <button id="chat-toggle-btn" class="chat-toggle-btn" aria-label="Open Chat">
+            <img src="spiderman edits.jpeg" alt="Spidy DP" class="chat-toggle-dp">
+        </button>
+    </div>
+
     <script src="app.js"></script>
 </body>
 </html>
