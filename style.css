@@ -474,4 +474,31 @@ body {
     }
 }
 
+/* Chatbot Option Buttons */
+.chat-option-btn {
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #ffffff;
+    background: rgba(226, 54, 54, 0.15);
+    border: 1px solid rgba(226, 54, 54, 0.4);
+    padding: 6px 14px;
+    border-radius: 8px;
+    display: inline-block;
+    transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.chat-option-btn:hover {
+    background: #e23636;
+    border-color: #e23636;
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 4px 10px rgba(226, 54, 54, 0.3);
+}
+
+.chat-option-btn:active {
+    transform: translateY(0) scale(0.98);
+}
+
+
 

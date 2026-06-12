@@ -91,10 +91,39 @@ document.addEventListener('DOMContentLoaded', () => {
             const indicator = document.getElementById('typing-indicator');
             if (indicator) indicator.remove();
 
-            // Append Spidy response
+            // Append Spidy response with interactive links
             const botMsgDiv = document.createElement('div');
             botMsgDiv.className = 'msg bot-msg';
-            botMsgDiv.innerText = 'hey i am spidy';
+            
+            const replyText = document.createElement('div');
+            replyText.innerText = 'hey i am spidy';
+            replyText.style.marginBottom = '8px';
+            botMsgDiv.appendChild(replyText);
+
+            const optionsDiv = document.createElement('div');
+            optionsDiv.className = 'chat-options';
+            optionsDiv.style.display = 'flex';
+            optionsDiv.style.gap = '8px';
+            optionsDiv.style.marginTop = '6px';
+            
+            const instagramUrl = 'https://www.instagram.com/https.spidy_8?igsh=MWc0amFjbzN5NWtlbQ%3D%3D&utm_source=qr';
+            
+            const followLink = document.createElement('a');
+            followLink.href = instagramUrl;
+            followLink.target = '_blank';
+            followLink.className = 'chat-option-btn';
+            followLink.innerText = 'Follow';
+            
+            const dmLink = document.createElement('a');
+            dmLink.href = instagramUrl;
+            dmLink.target = '_blank';
+            dmLink.className = 'chat-option-btn';
+            dmLink.innerText = 'DM Me';
+
+            optionsDiv.appendChild(followLink);
+            optionsDiv.appendChild(dmLink);
+            botMsgDiv.appendChild(optionsDiv);
+
             chatMessages.appendChild(botMsgDiv);
             scrollToBottom();
         }, 800);
