@@ -146,7 +146,7 @@ body.rohit-mode .rohit-wrapper {
 .rohit-bg-text {
     position: absolute;
     z-index: -1;
-    font-size: 5.5rem;
+    font-size: 4.5rem;
     font-weight: 900;
     color: #ffcc00; /* Yellow */
     font-family: 'Space Grotesk', sans-serif;
@@ -175,8 +175,8 @@ body.rohit-mode .spidy-img {
 }
 
 body.rohit-mode .image-wrapper {
-    width: 650px;
-    height: 650px;
+    width: 550px;
+    height: 550px;
 }
 
 body.rohit-mode .typing-title {
@@ -283,11 +283,11 @@ body.messi-mode .messi-btn {
         height: 380px;
     }
     body.rohit-mode .image-wrapper {
-        width: 380px;
-        height: 380px;
+        width: 320px;
+        height: 320px;
     }
     .rohit-bg-text {
-        font-size: 2.8rem;
+        font-size: 2.3rem;
     }
     .typing-title {
         font-size: 2.2rem;
