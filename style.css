@@ -116,8 +116,13 @@ body.messi-mode .messi-img {
     filter: drop-shadow(0 0 25px rgba(117, 170, 219, 0.8)) brightness(1.1);
 }
 
+body.messi-mode .image-wrapper {
+    width: 350px;
+    height: 350px;
+}
+
 body.messi-mode .typing-title {
-    display: none !important;
+    text-shadow: 0 0 25px rgba(117, 170, 219, 0.8), 0 0 10px rgba(117, 170, 219, 0.5);
 }
 
 /* Floating Messi Button in Right Corner */
@@ -169,6 +174,10 @@ body.messi-mode .messi-btn {
     .image-wrapper {
         width: 180px;
         height: 180px;
+    }
+    body.messi-mode .image-wrapper {
+        width: 250px;
+        height: 250px;
     }
     .typing-title {
         font-size: 2.2rem;
