@@ -93,6 +93,59 @@ body {
     100% { opacity: 0; }
 }
 
+/* Custom Football Cursor for Messi Mode */
+body.messi-mode, body.messi-mode * {
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'><circle cx='16' cy='16' r='14' fill='%23ffffff' stroke='%23111111' stroke-width='1.5'/><polygon points='16,11.2 20.6,14.5 18.8,19.9 13.2,19.9 11.4,14.5' fill='%23111111'/><polygon points='13,2 19,2 17.5,5 14.5,5' fill='%23111111'/><polygon points='28.5,10 29.5,14 26,15.5 24.5,12' fill='%23111111'/><polygon points='23.5,27.5 20,28.5 20,25.5 22.5,23.5' fill='%23111111'/><polygon points='8.5,27.5 12,28.5 12,25.5 9.5,23.5' fill='%23111111'/><polygon points='3.5,10 2.5,14 6,15.5 7.5,12' fill='%23111111'/><line x1='16' y1='11.2' x2='16' y2='5' stroke='%23111111' stroke-width='1.5'/><line x1='20.6' y1='14.5' x2='24.5' y2='12' stroke='%23111111' stroke-width='1.5'/><line x1='18.8' y1='19.9' x2='21.2' y2='24.5' stroke='%23111111' stroke-width='1.5'/><line x1='13.2' y1='19.9' x2='10.8' y2='24.5' stroke='%23111111' stroke-width='1.5'/><line x1='11.4' y1='14.5' x2='7.5' y2='12' stroke='%23111111' stroke-width='1.5'/><line x1='14.5' y1='5' x2='7.5' y2='12' stroke='%23111111' stroke-width='1.5'/><line x1='17.5' y1='5' x2='24.5' y2='12' stroke='%23111111' stroke-width='1.5'/><line x1='26' y1='15.5' x2='21.2' y2='24.5' stroke='%23111111' stroke-width='1.5'/><line x1='6' y1='15.5' x2='10.8' y2='24.5' stroke='%23111111' stroke-width='1.5'/><line x1='9.5' y1='23.5' x2='22.5' y2='23.5' stroke='%23111111' stroke-width='1.5'/></svg>") 16 16, auto !important;
+}
+
+body.messi-mode .spidy-img {
+    filter: drop-shadow(0 0 25px rgba(117, 170, 219, 0.8)) brightness(1.1);
+}
+
+/* Floating Messi Button in Right Corner */
+.messi-btn {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    z-index: 100;
+    padding: 10px 20px;
+    border-radius: 30px;
+    background: rgba(15, 15, 22, 0.65);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.messi-btn:hover {
+    background: rgba(117, 170, 219, 0.95); /* Light blue / Argentina blue */
+    border-color: rgba(117, 170, 219, 1);
+    box-shadow: 0 8px 20px rgba(117, 170, 219, 0.4);
+    transform: scale(1.05);
+}
+
+.messi-btn:active {
+    transform: scale(0.95);
+}
+
+body.messi-mode .messi-btn {
+    background: #75aadb;
+    border-color: #75aadb;
+    color: #07070a;
+    box-shadow: 0 8px 25px rgba(117, 170, 219, 0.6);
+}
+
 /* Responsive adjustments */
 @media (max-width: 600px) {
     .image-wrapper {
@@ -111,6 +164,12 @@ body {
     .music-icon {
         width: 18px;
         height: 18px;
+    }
+    .messi-btn {
+        top: 20px;
+        right: 20px;
+        padding: 8px 16px;
+        font-size: 0.8rem;
     }
 }
 

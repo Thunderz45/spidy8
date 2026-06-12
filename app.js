@@ -1,37 +1,67 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Typing animation
-    const text = "Hi i am spidy";
     const typedTextEl = document.getElementById('typed-text');
-    let charIndex = 0;
     const typingSpeed = 150;
+    let typingTimeout;
 
-    function type() {
-        if (charIndex < text.length) {
-            typedTextEl.textContent += text.charAt(charIndex);
-            charIndex++;
-            setTimeout(type, typingSpeed);
+    function startTyping(targetText) {
+        clearTimeout(typingTimeout);
+        typedTextEl.textContent = '';
+        let charIndex = 0;
+        function type() {
+            if (charIndex < targetText.length) {
+                typedTextEl.textContent += targetText.charAt(charIndex);
+                charIndex++;
+                typingTimeout = setTimeout(type, typingSpeed);
+            }
         }
+        type();
     }
 
-    setTimeout(type, 800);
+    setTimeout(() => startTyping("Hi i am spidy"), 800);
+
+    const bgVideo = document.getElementById('bg-video');
+
+    // Messi Mode Toggle controller
+    const messiToggle = document.getElementById('messi-toggle');
+    if (messiToggle) {
+        const videoSource = bgVideo.querySelector('source');
+        messiToggle.addEventListener('click', () => {
+            const isMessi = document.body.classList.toggle('messi-mode');
+            
+            // Update typing text and video source
+            if (isMessi) {
+                startTyping("Hi I am Messi 🐐");
+                videoSource.src = 'messi.mp4';
+            } else {
+                startTyping("Hi i am spidy");
+                videoSource.src = 'Untitled.mp4';
+            }
+            
+            // Reload and play video
+            bgVideo.load();
+            bgVideo.play().catch(err => console.log("Video play interrupted:", err));
+        });
+    }
 
     // Audio/Music toggle controller
     const musicToggle = document.getElementById('music-toggle');
-    const bgVideo = document.getElementById('bg-video');
     const muteIcon = document.getElementById('mute-icon');
     const unmuteIcon = document.getElementById('unmute-icon');
 
-    musicToggle.addEventListener('click', () => {
-        if (bgVideo.muted) {
-            bgVideo.muted = false;
-            muteIcon.classList.add('hidden');
-            unmuteIcon.classList.remove('hidden');
-        } else {
-            bgVideo.muted = true;
-            muteIcon.classList.remove('hidden');
-            unmuteIcon.classList.add('hidden');
-        }
-    });
+    if (musicToggle) {
+        musicToggle.addEventListener('click', () => {
+            if (bgVideo.muted) {
+                bgVideo.muted = false;
+                muteIcon.classList.add('hidden');
+                unmuteIcon.classList.remove('hidden');
+            } else {
+                bgVideo.muted = true;
+                muteIcon.classList.remove('hidden');
+                unmuteIcon.classList.add('hidden');
+            }
+        });
+    }
 
     // Chatbot functionality
     const chatToggleBtn = document.getElementById('chat-toggle-btn');
