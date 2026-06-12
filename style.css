@@ -122,8 +122,7 @@ body.messi-mode .image-wrapper {
 }
 
 body.messi-mode .typing-title {
-    text-shadow: 0 0 25px rgba(117, 170, 219, 0.8), 0 0 10px rgba(117, 170, 219, 0.5);
-    margin-top: 3.5rem;
+    display: none !important;
 }
 
 /* Floating Messi Button in Right Corner */
